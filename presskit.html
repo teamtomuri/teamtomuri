@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Press Kit – Team Tomuri</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@500;900&display=swap">
+<style>
+:root{--bg:#fdf7f4;--bg2:#f8e9ee;--card:#fff;--tx:#23301b;--mut:#66705e;--g:#4c8a1e;--p:#d9467a;--on:#fff;--bd:#ecd5dc;
+--hd:"Zen Maru Gothic","Hiragino Maru Gothic ProN",system-ui,sans-serif;--jp:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1710;--bg2:#17231a;--card:#1d2b20;--tx:#f2f7ec;--mut:#a3b39a;--g:#9bd84a;--p:#ff8fb1;--on:#10200a;--bd:#2f4333;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1710;--bg2:#17231a;--card:#1d2b20;--tx:#f2f7ec;--mut:#a3b39a;--g:#9bd84a;--p:#ff8fb1;--on:#10200a;--bd:#2f4333;color-scheme:dark}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));height:100%}
+body{background:var(--bg);color:var(--tx);font:16px/1.65 var(--hd)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+section{padding:80px 0}
+.alt{background:var(--bg2)}
+h1,h2,h3{line-height:1.12;font-weight:900}
+h1{font-size:clamp(2.3rem,7vw,4.6rem)}
+h2{font-size:clamp(1.8rem,4.5vw,2.9rem);margin-bottom:14px}
+.eyebrow{font:900 .78rem var(--jp);letter-spacing:.2em;text-transform:uppercase;color:var(--p);display:block;margin-bottom:12px}
+.lead{color:var(--mut);max-width:620px;margin-bottom:36px}
+.grad{background:linear-gradient(90deg,var(--g),var(--p));-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-block;padding:13px 28px;border-radius:999px;font:700 1rem var(--hd);border:2px solid var(--g);background:var(--g);color:var(--on);cursor:pointer;transition:transform .2s}
+.btn:hover{transform:translateY(-3px) rotate(-1deg)}
+.btn.ghost{background:transparent;color:var(--tx);border-color:var(--p)}
+/* kana separator */
+.sep{display:flex;align-items:center;justify-content:center;gap:18px;padding:26px 0;font:900 1.6rem var(--jp);background:var(--bg)}
+.sep::before,.sep::after{content:"";height:2px;flex:1;max-width:260px;background:linear-gradient(90deg,transparent,var(--bd))}
+.sep::after{transform:scaleX(-1)}
+.sep span:nth-child(1){color:var(--g)}.sep span:nth-child(2){color:var(--p)}.sep span:nth-child(3){color:var(--g)}
+/* nav */
+header{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--bd)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:8px;font:900 1.2rem var(--hd)}
+.logo svg{width:44px;height:32px}
+.logo b{color:var(--g)}
+.links{display:flex;gap:22px;align-items:center;font-size:.92rem;font-weight:700}
+.links a:hover{color:var(--p)}
+#tt,#burger{background:none;border:1px solid var(--bd);color:var(--tx);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:1rem}
+#burger{display:none}
+/* hero */
+#hero{min-height:100vh;display:flex;align-items:center;padding-top:110px;position:relative;overflow:hidden;background:radial-gradient(circle at 80% 30%,color-mix(in srgb,var(--p) 22%,transparent),transparent 55%),radial-gradient(circle at 10% 90%,color-mix(in srgb,var(--g) 20%,transparent),transparent 50%)}
+#cv{position:absolute;inset:0;width:100%;height:100%}
+#hero .wrap{position:relative;display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:center}
+#hero p{color:var(--mut);margin:20px 0 30px;max-width:520px;font-size:1.1rem}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.mascot{width:100%;max-width:400px;justify-self:center;animation:fl 5s ease-in-out infinite;filter:drop-shadow(0 18px 30px rgba(217,70,122,.3))}
+@keyframes fl{50%{transform:translateY(-14px) rotate(2deg)}}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:22px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(217,70,122,.18)}
+.thumb{height:150px;display:grid;place-items:center;font-size:3.3rem}
+.card .in{padding:20px}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;padding:4px 12px;border-radius:999px;background:var(--bg2);color:var(--p);margin-bottom:10px}
+.card p{color:var(--mut);font-size:.92rem}
+.plat{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.plat span{font-size:.72rem;border:1px solid var(--bd);border-radius:6px;padding:2px 8px;color:var(--mut)}
+/* featured */
+.feat{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.shot{aspect-ratio:16/10;border-radius:24px;background:linear-gradient(135deg,#9bd84a,#4c8a1e 50%,#ff8fb1);display:grid;place-items:center;font-size:5rem;box-shadow:0 20px 50px rgba(76,138,30,.3)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 12px}
+.tabs button{padding:8px 16px;border-radius:999px;border:1px solid var(--bd);background:var(--card);color:var(--tx);cursor:pointer;font:700 .9rem var(--hd)}
+.tabs button.on{background:var(--p);color:#fff;border-color:var(--p)}
+#tabtxt{color:var(--mut);min-height:90px}
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.about q{display:block;font:900 1.35rem/1.4 var(--hd);margin-bottom:22px;quotes:"“" "”"}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.facts div{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px}
+.facts small{display:block;color:var(--p);font:900 .7rem var(--jp);letter-spacing:.12em}
+.tl{border-left:3px solid var(--g);margin-left:8px;padding-left:28px;display:grid;gap:26px}
+.tl div{position:relative}
+.tl div::before{content:"";position:absolute;left:-37px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--p);border:3px solid var(--bg)}
+.tl b{color:var(--g)}
+.av{width:84px;height:84px;border-radius:50%;display:grid;place-items:center;font-size:2.2rem;margin-bottom:14px;background:linear-gradient(135deg,var(--g),var(--p))}
+.role{color:var(--g);font-size:.85rem;font-weight:700;margin-bottom:8px}
+.partners{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.partners span{border:2px dashed var(--bd);border-radius:14px;padding:12px 22px;color:var(--mut);font-weight:700}
+form{display:grid;gap:14px;max-width:560px}
+input,textarea,select{width:100%;padding:13px 16px;border-radius:14px;border:1px solid var(--bd);background:var(--card);color:var(--tx);font:inherit}
+input:focus,textarea:focus,select:focus{outline:2px solid var(--p)}
+#msg{color:var(--p);font-weight:700;min-height:24px}
+footer{padding:36px 0;border-top:1px solid var(--bd);color:var(--mut);font-size:.88rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center}
+footer .logo{color:var(--tx)}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media(max-width:800px){
+section{padding:60px 0}
+.feat,.about,#hero .wrap{grid-template-columns:1fr}
+.mascot{max-width:220px;order:-1}
+#burger{display:block}
+.links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--bg);padding:20px;border-bottom:1px solid var(--bd)}
+.links.open{display:flex}
+}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.mascot{animation:none}html{scroll-behavior:auto}}
+
+.phero{padding-top:130px;padding-bottom:30px;background:radial-gradient(circle at 85% 20%,color-mix(in srgb,var(--p) 22%,transparent),transparent 55%)}
+.gtabs button{font-size:1rem;padding:10px 18px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.box{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:8px 22px}
+.fr{display:grid;grid-template-columns:150px 1fr;gap:12px;padding:13px 0;border-bottom:1px dashed var(--bd);font-size:.95rem}
+.fr:last-child{border:0}.fr b{color:var(--p)}.fr span{color:var(--tx)}
+.feats{list-style:none;padding:0;display:grid;gap:10px;margin-top:14px}
+.feats li{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:12px 16px;color:var(--mut)}
+.feats li::before{content:"🥝 "}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.img{aspect-ratio:16/10;border-radius:18px;display:grid;place-items:center;align-content:center;color:#fff;text-align:center;box-shadow:0 10px 24px rgba(0,0,0,.12)}
+.img span{font-size:2.6rem}.img small{font-weight:700;opacity:.9}
+.vid span{font-size:3.4rem}
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,40px);background:var(--g);color:var(--on);padding:10px 20px;border-radius:999px;font-weight:700;opacity:0;transition:.3s;z-index:70}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+@media(max-width:800px){.two{grid-template-columns:1fr}.fr{grid-template-columns:1fr;gap:2px}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<g id="tor"><path fill-rule="evenodd" style="fill:var(--p)" d="M13 60L13 73L21 90L52 129L78 132L82 135L84 156L175 156L176 162L170 177L185 178L180 194L140 194L137 199L134 212L79 205L62 209L58 211L54 242L54 255L57 265L178 266L157 545L155 547L149 546L139 549L132 558L125 585L125 612L144 618L188 623L237 624L252 621L252 566L249 559L240 550L227 541L231 267L234 265L298 265L338 267L455 267L495 265L561 266L563 315L566 541L553 550L544 559L541 566L541 621L556 624L605 623L649 618L668 612L668 585L661 558L654 549L644 546L638 547L636 545L615 266L736 265L739 255L735 211L726 207L714 205L659 212L658 205L653 194L613 194L608 178L623 177L617 162L618 156L709 156L711 135L715 132L741 129L775 85L780 73L780 60L722 86L667 102L439 107L357 107L126 102L74 87ZM416 161L543 161L544 178L557 178L558 190L517 191L514 203L512 205L420 205L418 198ZM377 161L375 198L373 205L281 205L279 203L276 191L235 190L236 178L249 178L250 161Z"/></g>
+<g id="kiwi"><circle cx="396" cy="430" r="137" fill="#a9dc57"/><path fill-rule="evenodd" fill="#a67c3f" d="M379 282L355 287L330 297L308 311L285 333L269 356L257 383L251 409L250 443L255 471L263 493L279 520L300 543L329 563L353 573L382 579L410 579L440 573L466 562L493 543L511 524L525 503L538 471L543 443L543 418L536 383L524 356L508 333L490 315L461 296L438 287L415 282ZM380 298L401 297L432 302L453 310L479 327L497 345L509 362L518 380L523 395L527 417L527 444L522 469L510 497L500 512L481 532L458 548L434 558L409 563L384 563L359 558L337 549L312 532L293 512L283 497L271 469L266 444L266 416L270 395L279 371L292 350L314 327L331 315L352 305Z"/><path fill-rule="evenodd" fill="#eaf7c0" d="M396 331L390 344L384 368L381 371L375 369L352 346L348 344L346 345L347 356L354 379L354 386L352 388L346 388L318 380L310 381L314 388L336 410L337 415L328 420L303 426L297 431L302 434L326 440L337 445L335 452L312 475L310 479L312 481L316 481L344 473L352 473L354 475L354 482L346 509L347 516L350 516L369 497L380 489L385 495L393 526L395 529L398 529L402 520L407 498L411 490L416 490L443 516L446 516L447 509L439 482L439 475L441 473L449 473L477 481L481 481L483 479L481 475L458 452L456 445L467 440L491 434L496 430L490 426L465 420L456 415L457 410L482 384L482 380L470 381L447 388L441 388L439 386L439 379L447 351L446 344L441 346L418 369L412 371L409 368L400 335Z"/><path fill-rule="evenodd" fill="#2b3d1f" d="M376 508L369 512L361 520L361 533L363 539L370 536L379 526L378 513ZM417 507L412 519L412 527L416 533L424 540L427 535L430 522L426 515ZM339 487L329 489L320 494L316 512L325 511L335 506L339 493ZM452 485L452 493L456 503L469 509L475 509L475 503L471 492L465 488ZM472 451L473 454L485 465L496 464L504 461L503 458L491 447L478 448ZM287 461L305 465L309 463L318 454L319 451L309 447L300 447L288 458ZM285 404L288 409L299 416L312 413L318 409L311 402L304 398L298 398ZM472 410L480 414L491 415L503 405L504 401L492 397L485 397ZM313 352L314 359L321 370L328 372L340 372L338 364L331 354ZM475 349L462 352L456 356L452 374L463 372L472 366L475 356ZM364 321L362 326L361 339L369 348L377 352L379 344L379 333L375 328ZM426 320L423 321L412 333L412 342L416 352L421 349L430 338L429 328Z"/></g>
+<g id="txt"><path fill-rule="evenodd" style="fill:var(--tx)" d="M743 643L743 733L779 733L779 643ZM592 643L592 732L628 732L628 709L647 708L666 733L706 733L698 723L698 710L708 703L708 697L701 697L694 702L692 701L704 687L707 673L703 662L691 648L681 643ZM685 706L687 706ZM686 705L689 705ZM688 704L690 704ZM689 703L692 703ZM691 702L693 702ZM707 699L707 702L697 709L697 730L694 733L690 731L690 714L677 722L672 721L672 717L701 698ZM628 666L665 665L671 670L672 678L671 681L667 684L629 684ZM452 643L452 698L458 710L470 722L488 731L510 733L525 729L540 720L550 709L556 695L556 643L520 644L519 691L515 699L505 705L499 704L494 701L488 690L487 643ZM285 643L285 732L318 733L319 685L350 722L381 685L382 704L380 705L380 719L382 721L382 733L404 734L415 732L415 643L376 643L350 678L324 643ZM393 698L402 698L403 706L415 707L415 721L403 733L394 733L393 730L404 719L404 712L392 712L391 718L381 717L381 707L392 706ZM210 645L202 643L182 644L169 650L159 659L152 671L149 683L149 693L153 706L151 711L158 715L151 716L148 722L153 724L163 722L166 732L171 734L175 729L188 733L201 733L216 728L231 715L239 697L240 688L238 675L233 664L227 656ZM163 699L167 700L169 704L176 702L180 704L178 708L170 710L171 714L183 713L185 715L185 717L182 719L172 720L174 729L171 733L166 730L164 721L156 723L150 721L152 717L163 716L162 711L156 713L153 711L154 707L161 706ZM191 672L201 673L208 679L210 683L209 695L205 700L197 704L191 704L185 701L181 697L178 689L181 679L186 674ZM14 643L14 666L41 667L41 733L77 733L77 667L104 666L104 643Z"/></g>
+<symbol id="mark" viewBox="8 56 778 570"><use href="#tor"/><use href="#kiwi"/></symbol>
+<symbol id="logo" viewBox="8 56 778 684"><use href="#tor"/><use href="#kiwi"/><use href="#txt"/></symbol>
+</svg>
+
+<header><div class="wrap"><nav>
+<a href="index.html" class="logo"><svg><use href="#mark"/></svg>Team <b>Tomuri</b></a>
+<div class="links" id="links">
+<a href="index.html">← Voltar ao site</a><a href="#fact">Factsheet</a><a href="#assets">Imagens</a><a href="#contato">Contato</a>
+<button id="tt" aria-label="Alternar tema">◐</button>
+</div>
+<button id="burger" aria-label="Menu">☰</button>
+</nav></div></header>
+<main>
+<section id="top" class="phero"><div class="wrap">
+<span class="eyebrow">Press Kit · Factsheet · キウイ</span>
+<h1>Press kit <span class="grad">Team Tomuri</span></h1>
+<p class="lead">Tudo o que a imprensa e criadores de conteúdo precisam sobre nossos jogos. Escolha um jogo abaixo.</p>
+<div class="tabs gtabs" id="gtabs"></div>
+</div></section>
+<div id="pk"></div>
+<div class="sep" aria-hidden="true"><span>キ</span><span>ウ</span><span>イ</span></div>
+<section id="studio"><div class="wrap">
+<span class="eyebrow">Sobre o estúdio</span><h2>Team Tomuri</h2>
+<div class="two"><div><p class="lead" style="margin-bottom:12px" id="boiler">A Team Tomuri é um estúdio indie brasileiro que cria jogos com o juice nipônico: a energia do Brasil unida à estética e ao capricho do Japão. Fundado em ANO, em CIDADE, o estúdio é formado por XX pessoas.</p><button class="btn ghost" data-copy="#boiler">Copiar texto</button></div>
+<div class="facts"><div><small>FUNDAÇÃO</small>Ano · Cidade, Brasil</div><div><small>SITE</small>seudominio.com</div><div><small>E-MAIL</small>press@seudominio.com</div><div><small>LEMA</small>Juice nipônico 🥝</div></div></div>
+</div></section>
+<div class="sep" aria-hidden="true"><span>キ</span><span>ウ</span><span>イ</span></div>
+<section id="contato" class="alt"><div class="wrap">
+<span class="eyebrow">Contato de imprensa</span><h2>Quer <span class="grad">chaves de review</span> ou uma entrevista?</h2>
+<p class="lead">Escreva para nós e respondemos o quanto antes.</p>
+<div class="cta"><a class="btn" href="mailto:press@seudominio.com">press@seudominio.com</a><a class="btn ghost" href="index.html#redes">Nossas redes</a></div>
+</div></section>
+</main>
+<footer><div class="wrap"><a href="index.html" class="logo"><svg><use href="#mark"/></svg>Team Tomuri</a><span>© 2026 Team Tomuri · Brasil · キウイ</span><span>Materiais liberados para uso editorial</span></div></footer>
+<div id="toast" role="status">Copiado!</div>
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)};
+$('#burger').onclick=function(){$('#links').classList.toggle('open')};
+document.querySelectorAll('#links a').forEach(function(a){a.onclick=function(){$('#links').classList.remove('open')}});
+var root=document.documentElement;
+$('#tt').onclick=function(){var d=matchMedia('(prefers-color-scheme: dark)').matches;var cur=root.dataset.theme||(d?'dark':'light');root.dataset.theme=cur==='dark'?'light':'dark'};
+var games=[
+{n:'Nome do Jogo 1',e:'🥝',c:'#9bd84a,#4c8a1e',g:'Gênero · 1–4 jogadores',d:'Lançamento: 2027',pl:'PC, Nintendo Switch',pr:'R$ 00,00'},
+{n:'Nome do Jogo 2',e:'🌸',c:'#ffb3cc,#d9467a',g:'Gênero · 1 jogador',d:'A anunciar',pl:'PC',pr:'A definir'},
+{n:'Nome do Jogo 3',e:'⛩️',c:'#2b3a2a,#6b8f4e',g:'Gênero · 1 jogador',d:'A anunciar',pl:'PC',pr:'A definir'},
+{n:'Nome do Jogo 4',e:'🎋',c:'#ffd6e3,#a9dc57',g:'Gênero · A definir',d:'Conceito',pl:'A definir',pr:'A definir'}];
+function esc(s){return s}
+function row(k,v){return '<div class="fr"><b>'+k+'</b><span>'+v+'</span></div>'}
+function show(i){
+var g=games[i],h='';
+document.querySelectorAll('#gtabs button').forEach(function(b,j){b.classList.toggle('on',j===i)});
+var desc='Escreva aqui a descrição curta de '+g.n+': uma ou duas frases que resumam o jogo, o clima e a promessa para o jogador.';
+var shots='';for(var k=1;k<=6;k++)shots+='<div class="img" style="background:linear-gradient(135deg,'+g.c+')"><span>'+g.e+'</span><small>Screenshot '+k+'</small></div>';
+var feats=['Mecânica principal em destaque','Visual inspirado no Japão com alma brasileira','Modos para um ou mais jogadores','Trilha sonora original','Controles pensados para teclado e controle'].map(function(f){return '<li>'+f+'</li>'}).join('');
+h+='<div class="sep" aria-hidden="true"><span>キ</span><span>ウ</span><span>イ</span></div>';
+h+='<section id="fact"><div class="wrap"><span class="eyebrow">Factsheet</span><h2>'+g.n+'</h2><div class="two">';
+h+='<div class="box">'+row('Desenvolvedora','Team Tomuri · Brasil')+row('Publisher','Autopublicado / nome do publisher')+row('Gênero',g.g)+row('Data de lançamento',g.d)+row('Plataformas',g.pl)+row('Preço',g.pr)+row('Site','seudominio.com/jogo')+row('Contato de imprensa','press@seudominio.com')+row('Redes','Instagram · X · YouTube · Itch.io')+'</div>';
+h+='<div><h3>Descrição</h3><p class="lead" style="margin:10px 0 12px" id="desc">'+desc+'</p><button class="btn ghost" data-copy="#desc">Copiar descrição</button>';
+h+='<h3 style="margin-top:28px">Histórico</h3><p class="lead" style="margin-top:10px">Conte aqui, em poucas linhas, como o projeto nasceu, o que o inspirou e em que fase está.</p></div></div></div></section>';
+h+='<section class="alt"><div class="wrap two"><div><span class="eyebrow">Destaques</span><h2>Features</h2><ul class="feats">'+feats+'</ul></div>';
+h+='<div><span class="eyebrow">Trailer</span><h2>Vídeo</h2><div class="img vid" style="background:linear-gradient(135deg,'+g.c+')"><span>▶</span><small>Cole aqui o link do trailer (YouTube)</small></div></div></div></section>';
+h+='<section id="assets"><div class="wrap"><span class="eyebrow">Imagens</span><h2>Screenshots e arte</h2><p class="lead">Substitua pelos arquivos reais. Todos liberados para uso editorial.</p><div class="shots">'+shots+'</div>';
+h+='<div class="cta" style="margin-top:26px"><a class="btn" href="#">Baixar todas as imagens (.zip)</a><a class="btn ghost" href="#">Logo e ícone</a></div></div></section>';
+h+='<section class="alt"><div class="wrap two"><div><span class="eyebrow">Reconhecimento</span><h2>Prêmios e menções</h2><ul class="feats"><li>“Frase de elogio da imprensa” – Veículo</li><li>Seleção oficial – Nome do evento</li><li>Indicação – Nome do prêmio</li></ul></div>';
+h+='<div><span class="eyebrow">Equipe</span><h2>Créditos</h2><ul class="feats"><li><b>Direção criativa:</b> Nome Sobrenome</li><li><b>Programação:</b> Nome Sobrenome</li><li><b>Arte:</b> Nome Sobrenome</li><li><b>Áudio:</b> Nome Sobrenome</li></ul></div></div></section>';
+$('#pk').innerHTML=h;
+}
+games.forEach(function(g,i){var b=document.createElement('button');b.textContent=g.e+' '+g.n;b.onclick=function(){show(i);$('#fact').scrollIntoView({behavior:'smooth'})};$('#gtabs').appendChild(b)});
+show(0);
+document.addEventListener('click',function(e){var b=e.target.closest('[data-copy]');if(!b)return;var t=$(b.dataset.copy).textContent;try{navigator.clipboard.writeText(t)}catch(x){}var o=$('#toast');o.classList.add('on');setTimeout(function(){o.classList.remove('on')},1500)});
+})();
+</script>
+</body>
+</html>
